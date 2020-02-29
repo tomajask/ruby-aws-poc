@@ -1,0 +1,8 @@
+version: '3.7'
+
+services:
+  web:
+    build: .
+    volumes:
+      - ./source:/app
+    entrypoint: 'ash -c'
