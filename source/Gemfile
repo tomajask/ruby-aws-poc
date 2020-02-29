@@ -2,6 +2,7 @@
 
 source "https://rubygems.org"
 
+gem 'aws-sdk-dynamodb', '~> 1'
 gem "pry", git: "https://github.com/pry/pry.git", ref: "899684c3ba24156e0ca3853b74ac58c276a14379" # https://github.com/pry/pry/issues/2097
 
 group :test do

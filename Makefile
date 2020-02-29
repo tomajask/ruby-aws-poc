@@ -1,10 +1,13 @@
 build:
 	docker-compose build
 
-test:
+up:
+	TMPDIR=/private$$TMPDIR docker-compose up -d
+
+test: build up
 	docker-compose run web 'bundle exec rspec'
 
-dev: build
+dev: build up
 	docker-compose run web 'ash -l'
 
 clean:
