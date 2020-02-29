@@ -1,5 +1,7 @@
 FROM ruby:2.7-alpine3.11
 
+RUN apk update && apk upgrade && apk add build-base git
+
 RUN mkdir /app
 WORKDIR /app
 

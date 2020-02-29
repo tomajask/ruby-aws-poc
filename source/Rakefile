@@ -1,0 +1,12 @@
+# frozen_string_literal: true
+
+task :environment do
+  require ::File.expand_path("../config/environment", __FILE__)
+end
+
+desc "Start Ruby Console"
+task console: :environment do
+  ARGV.clear
+  require "pry"
+  Pry.start
+end
